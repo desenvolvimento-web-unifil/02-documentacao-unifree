@@ -102,14 +102,12 @@ def Apostar(request, idpartida):
 
 
 def EntregarPremio(request, pk):
-    
     mensagem = ''
     data = contextVencedores(pk)
     vencedores = data['vencedores']
     apostadores = data['apostadores']
     premio = data["aposta"]["premio"]
-
-    if len(vencedores) > 0 :
+    if len(vencedores) > 0:
         for aposta in data['vencedores']:
             user = aposta.user
             user.credito.valor += premio
@@ -120,18 +118,14 @@ def EntregarPremio(request, pk):
 
     elif apostadores:
         print(apostadores)
-        for aposta in apostadores :
+        for aposta in apostadores:
             user = aposta.user
             user.credito.valor += 5
             user.save()
         mensagem = f'Valor de aposta devolvido para {len(apostadores)} jogador(es) com sucesso...'
-    
     #Encerrar a premiação das partidas
     partida = data['partida']
     partida.encerrado = True
     partida.save()
-    
-    messages.success(request,mensagem)
-    
+    messages.success(request, mensagem)
     return redirect('blog:jogadores')
-

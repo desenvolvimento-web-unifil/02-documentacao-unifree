@@ -8,7 +8,7 @@ from .views import (
                     PartidaDetailView, 
                     PartidaUpdateView,
                     EntregarPremio,
-                    PartidaConcluida 
+                    PartidaConcluida
                     ) 
 
 
