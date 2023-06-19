@@ -113,7 +113,7 @@ def EntregarPremio(request, pk):
             user.credito.valor += premio
             Ranking.objects.create(user=user, aposta=aposta, premio=premio)
             user.save()        
-        # Criar mensagem de sucesso, pois a operação foi efectuada com sucesso.
+      
         mensagem = f'Premio distribuido para {len(vencedores)} jogador(es) com sucesso...'
 
     elif apostadores:
@@ -123,7 +123,7 @@ def EntregarPremio(request, pk):
             user.credito.valor += 5
             user.save()
         mensagem = f'Valor de aposta devolvido para {len(apostadores)} jogador(es) com sucesso...'
-    #Encerrar a premiação das partidas
+
     partida = data['partida']
     partida.encerrado = True
     partida.save()

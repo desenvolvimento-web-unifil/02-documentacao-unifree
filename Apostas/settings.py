@@ -94,7 +94,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
@@ -108,7 +108,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Configuração da rota de redirecionamento para as views que é necessário efectuar o login para acessar
 LOGIN_REDIRECT_URL = 'blog:partidas'
 LOGIN_URL = 'blog:login'
 LOGOUT_REDIRECT_URL = 'blog:partidas'

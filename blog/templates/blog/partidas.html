@@ -29,7 +29,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    {% comment %} Mostrando a lista de todas partidas criadas {% endcomment %}
+                
                     {% for partida in partidas %}   
                         <tr>
                             <td><p>{{ partida.pk }}</p></td>
@@ -37,7 +37,7 @@
                             <td><p>{{ partida.placar1 }} - {{ partida.placar2 }}</p></td>
                             <td>{{ partida.data_partida }}</td>
 
-                            {% comment %} Verificar se a partida já foi realizada {% endcomment %}
+            
                             {% if  partida.concluido %}
                                 <td><span class="label label-success">Concuída</span></td>
                             {% else %}
@@ -52,9 +52,9 @@
                                     {% endif %}
                                     <a class="btn" href="{% url 'blog:vencedores' partida.id %}" rel="tooltip" data-original-title="Mais informações sobre a partida">Detalhes</a>
 
-                                  {% comment %} so actualiza se o usuario fizer parte a equipe de afministração do sistema {% endcomment %}
+                               
                                   {% if user.is_staff %}
-                                    <a class="btn" href="{% url 'blog:partida-update' partida.id %}" rel="tooltip" data-original-title="Atualizar da partida"><i class="icon-inbox"></i> Actualizar</a>
+                                    <a class="btn" href="{% url 'blog:partida-update' partida.id %}" rel="tooltip" data-original-title="Atualizar da partida"><i class="icon-inbox"></i> Atualizar</a>
                                   {% endif %}  
                                   
                                </div>
