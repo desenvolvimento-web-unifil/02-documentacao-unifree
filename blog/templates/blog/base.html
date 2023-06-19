@@ -58,7 +58,7 @@
         </div>
     </div>
     
-    {% comment %} Imprimir mensagens caso for enviada uma mensagem {% endcomment %}
+  
     {% if messages %}
     {% for message in messages %}
       <div class="alert alert-{{ message.tags }}">
@@ -75,7 +75,7 @@
                     <li><a href="{% url 'blog:apostas' %}">Apostas</a></li>
                     <li><a href="{% url 'blog:jogadores' %}"> Jogadores</a></li>
 
-                    {% comment %} verificar se o usuario faz parte da equipe de administração do site {% endcomment %}
+                  
                      {% if user.is_staff %}
                         <li><a href="/admin">Admin</a></li>
                      {% endif %}

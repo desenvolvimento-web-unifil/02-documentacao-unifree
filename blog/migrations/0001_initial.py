@@ -18,8 +18,8 @@ class Migration(migrations.Migration):
             name='Aposta',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('placar1', models.IntegerField(default=0, help_text='Indica o total de golos da 1ª equipe', verbose_name='Placar 1')),
-                ('placar2', models.IntegerField(default=0, help_text='Indica o total de golos da 2ª equipe', verbose_name='Placar 2')),
+                ('placar1', models.IntegerField(default=0, help_text='Indica o total de gols da 1ª equipe', verbose_name='Placar 1')),
+                ('placar2', models.IntegerField(default=0, help_text='Indica o total de gols da 2ª equipe', verbose_name='Placar 2')),
                 ('valor', models.DecimalField(decimal_places=2, default=5, max_digits=11)),
             ],
         ),
@@ -44,8 +44,8 @@ class Migration(migrations.Migration):
             name='Partida',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('placar1', models.IntegerField(default=0, help_text='Indica o total de golos da 1ª equipe', verbose_name='Placar 1')),
-                ('placar2', models.IntegerField(default=0, help_text='Indica o total de golos da 2ª equipe', verbose_name='Placar 2')),
+                ('placar1', models.IntegerField(default=0, help_text='Indica o total de gols da 1ª equipe', verbose_name='Placar 1')),
+                ('placar2', models.IntegerField(default=0, help_text='Indica o total de gols da 2ª equipe', verbose_name='Placar 2')),
                 ('data_criada', models.DateTimeField(auto_now_add=True, verbose_name='Data de criação')),
                 ('data_partida', models.DateTimeField(default=None, verbose_name='Data da partida')),
                 ('concluido', models.BooleanField(default=False)),
