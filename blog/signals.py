@@ -13,13 +13,3 @@ def create_credito(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_credito(sender, instance, **kwargs):
     instance.credito.save()
-    
-    
-# @receiver(post_save,sender=User)
-# def create_perfil(sender, instance, created, **kwargs):
-#     if created:
-#         Credito.objects.create(user=instance)
-        
-# @receiver(post_save,sender=User)
-# def save_perfil(sender, instance, **kwargs):
-#     instance.perfil.save()

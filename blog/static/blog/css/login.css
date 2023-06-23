@@ -1,0 +1,95 @@
+
+  body{
+    background-color: #ccc;
+  }
+  .navbar-inner {
+    background-color: #333;
+    background-image: none;
+  }
+
+
+  .account-container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-content {
+    padding: 30px;
+  }
+
+  .form-content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .form-content hr.alt {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .form-content .alert {
+    margin-bottom: 20px;
+  }
+
+  .form-content .field {
+    margin-bottom: 20px;
+  }
+
+  .form-content label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-content input[type="text"],
+  .form-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .form-content .login-actions {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .form-content .login-checkbox {
+    float: left;
+  }
+
+  .form-content .btn-signin {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 4px;
+  }
+
+  .form-content p {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .titulo {
+    color: #fff;
+    font-size: larger;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+

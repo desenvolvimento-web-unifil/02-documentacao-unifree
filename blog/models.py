@@ -24,8 +24,8 @@ class Partida(models.Model):
     id = models.AutoField(primary_key=True)
     equipe1 = models.ForeignKey(Equipe, related_name='equipe1', on_delete=models.CASCADE, verbose_name='1ª Equipe')
     equipe2 = models.ForeignKey(Equipe, related_name='equipe2', on_delete=models.CASCADE, verbose_name='2ª Equipe')
-    placar1 = models.IntegerField(verbose_name='Placar 1', default=0, help_text='Indica o total de gols da 1ª equipe')
-    placar2 = models.IntegerField(verbose_name='Placar 2', default=0, help_text='Indica o total de gols da 2ª equipe')
+    placar1 = models.IntegerField(verbose_name='Placar 1', default=0, help_text='Indica o total de partidas ganhas da 1ª equipe')
+    placar2 = models.IntegerField(verbose_name='Placar 2', default=0, help_text='Indica o total de partidas ganhas da 2ª equipe')
     data_criada = models.DateTimeField(auto_now_add=True, verbose_name='Data de criação')
     data_partida = models.DateTimeField(default=None, verbose_name='Data da partida')
     concluido = models.BooleanField(default=False)
@@ -42,8 +42,8 @@ class Aposta(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='apostas')
     partida = models.ForeignKey(Partida,on_delete=models.CASCADE,related_name='apostas')
-    placar1 = models.IntegerField(verbose_name='Placar 1',default=0,help_text='Indica o total de gols da 1ª equipe')
-    placar2 = models.IntegerField(verbose_name='Placar 2',default=0,help_text='Indica o total de gols da 2ª equipe')
+    placar1 = models.IntegerField(verbose_name='Placar 1',default=0,help_text='Indica o total de partidas ganhas da 1ª equipe')
+    placar2 = models.IntegerField(verbose_name='Placar 2',default=0,help_text='Indica o total de partidas ganhas da 2ª equipe')
     valor = models.DecimalField(default=5,max_digits=11,decimal_places=2)
     
     def __str__(self):

@@ -9,12 +9,56 @@
     <meta name="author" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <!-- Le styles -->
+    <!-- Estilos -->
     <link href="{% static 'blog/css/bootstrap.css' %}" rel="stylesheet" />
     <link href="{% static 'blog/css/mbooh.css' %}" rel="stylesheet" />
     <link href="{% static 'blog/css/icon-style.css ' %}" rel="stylesheet" />
     <link href="{% static 'blog/css/bootstrap-responsive.css ' %}" rel="stylesheet" />
     <link href="{% static 'blog/css/apostas.css' %}" rel="stylesheet" />
+
+    <style>
+      /* Adicione estilos personalizados aqui */
+
+      body {
+       
+        padding-top: 60px; /* Espaçamento para a barra de navegação fixa no topo */
+      }
+
+      .navbar-inner {
+        background-color: #333; /* Cor de fundo da barra de navegação */
+      }
+
+      .navbar .brand {
+        color: #fff; /* Cor do texto do título do site na barra de navegação */
+      }
+
+      .navbar .nav > li > a {
+        color: #fff; /* Cor do texto dos links da barra de navegação */
+      }
+
+      .navbar .nav > li > a:hover,
+      .navbar .nav > li > a:focus {
+        color: #fff; /* Cor do texto dos links da barra de navegação em hover/foco */
+        background-color: #000; /* Cor de fundo dos links da barra de navegação em hover/foco */
+      }
+
+      .menu-head {
+        background-color: #f5f5f5; /* Cor de fundo do cabeçalho do menu */
+        border-bottom: 1px solid #ddd; /* Borda inferior do cabeçalho do menu */
+      }
+
+      .menu-head .nav > li > a {
+        color: #333; /* Cor do texto dos links do cabeçalho do menu */
+      }
+
+      .menu-head .nav > li > a:hover,
+      .menu-head .nav > li > a:focus {
+        background-color: #e5e5e5; /* Cor de fundo dos links do cabeçalho do menu em hover/foco */
+      }
+
+     
+
+    </style>
 
   </head>
 
@@ -31,34 +75,30 @@
           <a class="brand" href="#">Apostas</a>
           <div class="nav-collapse">
             <ul class="nav">
-                <li><a data-toggle="modal" href="#notif"><i class="icon-white icon-inbox"></i> Crédito <span class="badge badge-info">{{user.credito.valor}} AO</span></a></li>
+              <li>
+                <a data-toggle="modal" href="#notif">
+                  <i class="icon-white icon-inbox"></i> Crédito
+                  <span class="badge badge-info">{{user.credito.valor}} AO</span>
+                </a>
+              </li>
             </ul>
             <ul class="nav pull-right">
-
-            <li class="dropdown">
-              <a href="" class="dropdown-toggle" style='font-size:14px;' data-toggle="dropdown">{{user.username}} <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#"><i class="icon-user"></i> Perfil</a></li>
-                <li class="divider"></li>
-                <li><a href="{% url 'blog:sair' %}"><i class="icon-off"></i> Sair</a></li>
-              </ul>
-            </li>
-
-          </ul>
+              <li class="dropdown">
+                <a href="" class="dropdown-toggle" style="font-size: 14px;" data-toggle="dropdown">{{user.username}} <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="icon-user"></i> Perfil</a></li>
+                  <li class="divider"></li>
+                  <li><a href="{% url 'blog:sair' %}"><i class="icon-off"></i> Sair</a></li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="menu-head">
-        <div class="container-fluid">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="partidas.html">Menu</a></li>
-            </ul>
-        </div>
-    </div>
     
-  
+    {% comment %} Imprimir mensagens caso for enviada uma mensagem {% endcomment %}
     {% if messages %}
     {% for message in messages %}
       <div class="alert alert-{{ message.tags }}">
@@ -75,7 +115,7 @@
                     <li><a href="{% url 'blog:apostas' %}">Apostas</a></li>
                     <li><a href="{% url 'blog:jogadores' %}"> Jogadores</a></li>
 
-                  
+                    {% comment %} verificar se o usuario faz parte da equipe de administração do site {% endcomment %}
                      {% if user.is_staff %}
                         <li><a href="/admin">Admin</a></li>
                      {% endif %}
@@ -87,8 +127,7 @@
       {% block content %}
       {% endblock content %}
 
-
-        </div> 
+      </div> 
     </div> 
     
     <script src="{% static 'blog/js/jquery-1.7.2.min.js' %}"></script>

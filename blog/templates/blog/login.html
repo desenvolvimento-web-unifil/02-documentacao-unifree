@@ -9,21 +9,16 @@
     <meta name="author" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <!-- Le styles -->
-    <link href="{% static 'blog/css/bootstrap.css' %}" rel="stylesheet" />
-    <link href="{% static 'blog/css/mbooh.css' %}" rel="stylesheet" />
-    <link href="{% static 'blog/css/icon-style.css ' %}" rel="stylesheet" />
-    <link href="{% static 'blog/css/bootstrap-responsive.css ' %}" rel="stylesheet" />
- 
+    <link href="{% static 'blog/css/login.css' %}" rel="stylesheet" />
   </head> 
 
   <body style="background: rgb(63,94,251);
   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,11,83,1) 100%);">
 
     <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
+      <div class="titulo navbar-inner">
         <div class="container-fluid">
-          <a class="brand" href="login.html">Apostas</a>
+          Login Unifree
         </div>
       </div>
     </div>
@@ -38,7 +33,7 @@
 
     {% if form.errors %}
       <div class="alert alert-danger">
-          <p>Nome de usuário ou senha incorrecta, por favor verifique as suas credenciais.</p>
+          <p>Nome de usuário ou senha incorreta, por favor verifique as suas credenciais.</p>
       </div>
     {% endif %}
 
@@ -72,7 +67,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="{% static 'blog/js/jquery-1.7.2.min.js' %}"></script>
     <script src="{% static 'blog/js/bootstrap.js' %}"></script>
-    <script src=""{% static 'blog/js/mbooh.js' %}></script>
+    <script src="{% static 'blog/js/mbooh.js' %}"></script>
 
   </body>
 </html>
