@@ -63,11 +63,6 @@ class JogadoresListView(LoginRequiredMixin, ListView):
 
 
 def Apostar(request, idpartida):
-    """[Efectuar Apostas]
-    Este metodo serve para criar uma nova aposta,
-    primeiramente é selecionada a partida e o usuario que está efectuando a ação,
-    depois é verificado se o jogador tem saldo suficiente na conta para efectuar a aposta.    
-    """
     try:
 
         if request.method == 'POST':
