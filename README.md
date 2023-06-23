@@ -1,7 +1,7 @@
 # Sistema de Apostas
 
 Projeto desenvolvido para a disciplina de Desenvolvimento de Aplicativos Web.
-Objetivo é apostar os jogosdo mundial do LOL
+O objetivo do site é possibilitar a aposta nos jogos do mundial do LOL
 
 ## Parte 1 (Administrador):
 1. Realizar o cadastro de novos jogadores com seus nomes, logins (únicos) e senhas. Cada novo jogador receberá automaticamente um crédito de 100,00 AO.
