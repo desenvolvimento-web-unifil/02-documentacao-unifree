@@ -1,0 +1,55 @@
+<form method="post" class="user-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="submit-button">Criar Usuário</button>
+  </form>
+  
+  <style>
+    body{
+        display:flex;
+        justify-content: center;
+    }
+    .user-form {
+        width: 500px;
+        height: 200px;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+    }
+  
+    .user-form p {
+      margin: 10px 0;
+    }
+  
+    .user-form label {
+      display: block;
+      font-weight: bold;
+    }
+  
+    .user-form input[type="text"],
+    .user-form input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+  
+    .user-form button[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  
+    .user-form button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>

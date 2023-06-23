@@ -4,10 +4,24 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView, CreateView, DetailView, UpdateView
 from django.db import IntegrityError
 from django.contrib import messages
+from .forms import UserCreationForm
 
 from .utils import contextVencedores
 from .models import Partida, Aposta, User, Ranking
-
+from django.urls import reverse
+def create_user(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+           
+            user = form.save(commit=False)
+            user.set_password(form.cleaned_data['password'])
+            form.save()
+            return redirect(reverse('blog:login'))
+    else:
+        form = UserCreationForm()
+    
+    return render(request, 'create_user.html', {'form': form})
 
 class PartidasListView(LoginRequiredMixin, ListView):
     model = Partida
@@ -81,10 +95,10 @@ def Apostar(request, idpartida):
                 user.save()
                 
                 # Criar mensagem de sucesso, pois a operação for efectuada com sucesso.
-                messages.success(request,f'Aposta da partida {partida.equipe1} vs {partida.equipe2} efectuada com sucesso!')
+                messages.success(request,f'Aposta da partida {partida.equipe1} vs {partida.equipe2} efetuada com sucesso!')
             else:
                 # Criar mensagem de erro, porque o usuario não tem valor suficiente para apostar.
-                messages.error(request,'ups!!! O seu saldo é insuficiente para efectuar esta operação, recarregue o seu cartão para continuar apostar.')
+                messages.error(request,'ups!!! O seu saldo é insuficiente para efetuar esta operação, recarregue o seu cartão para continuar apostar.')
 
                 # Redirecionar o usuario para rota de partidas.
                 return redirect('blog:partidas') 

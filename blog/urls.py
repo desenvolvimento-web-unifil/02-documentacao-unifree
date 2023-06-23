@@ -1,5 +1,6 @@
 from django.urls import path
 from django.contrib.auth import views as auth_views 
+from blog.views import create_user
 from .views import ( 
                     Apostar, 
                     ApostasListView, 
@@ -24,4 +25,5 @@ urlpatterns = [
     path('jogadores/', JogadoresListView.as_view(), name='jogadores'),
     path('apostar/<int:idpartida>/', Apostar, name='apostar'),
     path('partida/<int:pk>/update', PartidaUpdateView.as_view(), name='partida-update'),
+   path('cadastrar/', create_user, name='cadastrar'),
 ]
