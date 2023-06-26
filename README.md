@@ -63,4 +63,4 @@ O objetivo do site é possibilitar a aposta nos jogos do mundial do LOL
 
 **Caso de uso**
 
-![image]([Caso de uso.png](https://github.com/desenvolvimento-web-unifil/02-documentacao-unifree/blob/main/Caso%20de%20uso.png?raw=true)
+![image](https://github.com/desenvolvimento-web-unifil/02-documentacao-unifree/blob/main/Caso%20de%20uso.png?raw=true)
