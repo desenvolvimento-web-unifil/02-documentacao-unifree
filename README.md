@@ -66,3 +66,6 @@ O objetivo do site é possibilitar a aposta nos jogos do mundial do LOL
 * Eu como usuário gostaria de saber o valor mínimo do jogo antes de selecionar um.
 * Eu como usuário gostaria de saber quais jogos estão disponíveis e o limite para apostar.
 
+**Caso de uso**
+
+![useCaseMario](https://github.com/desenvolvimento-web-unifil/02-documentacao-unifree/assets/82620144/db7c376f-fcb5-492c-98f5-e67c8e999c2f)
