@@ -40,3 +40,29 @@ O objetivo do site é possibilitar a aposta nos jogos do mundial do LOL
 3. Crie um superusuário com o comando `python manage.py createsuperuser`.
 4. Inicie o servidor com o comando `python manage.py runserver`.
 5. Acesse o sistema através do endereço `http://localhost:8000` ou `http://127.0.0.1:8000/`.
+
+## Requisitos:
+**Cadastro/Login**
+1. Criar conta do usuário
+2. Mudança de senha
+
+**Apostas**
+1. Criar apostas
+2. Ver times e partidas
+3. Dinheiro apostado
+4. Dinheiro sacado
+
+## História de usuário:
+**Apostas**
+* Eu como usuário de apostas e jogador do jogo league of legends, gostaria muito de poder conseguir apostar no meu time preferido e ganhar um dinheiro em cima disso.
+* Eu como admin gostaria de ver e anunciar os jogos que estão acontecendo e que vão acontecer.
+* Eu como usuário gostaria de saber a maneira que receberei meu dinheiro após o jogo.
+
+**Usuário**
+* Eu como usuário gostaria de maior facilidade e segurança na criação de minha conta.
+
+**Seleção de jogos**
+* Eu como usuário apostador gostaria de verificar quais são os tipos de aposta que tenho e os jogos disponíveis.
+* Eu como usuário gostaria de saber o valor mínimo do jogo antes de selecionar um.
+* Eu como usuário gostaria de saber quais jogos estão disponíveis e o limite para apostar.
+
