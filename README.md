@@ -3,6 +3,7 @@
 Projeto desenvolvido para a disciplina de Desenvolvimento de Aplicativos Web.
 O objetivo do site é possibilitar a aposta nos jogos do mundial do LOL
 
+## Requisitos:
 ## Parte 1 (Administrador):
 1. Realizar o cadastro de novos jogadores com seus nomes, logins (únicos) e senhas. Cada novo jogador receberá automaticamente um crédito de 100,00 AO.
 2. Cadastrar equipes.
@@ -41,25 +42,19 @@ O objetivo do site é possibilitar a aposta nos jogos do mundial do LOL
 4. Inicie o servidor com o comando `python manage.py runserver`.
 5. Acesse o sistema através do endereço `http://localhost:8000` ou `http://127.0.0.1:8000/`.
 
-## Requisitos:
-**Cadastro/Login**
-1. Criar conta do usuário
-2. Mudança de senha
-
-**Apostas**
-1. Criar apostas
-2. Ver times e partidas
-3. Dinheiro apostado
-4. Dinheiro sacado
-
 ## História de usuário:
 **Apostas**
 * Eu como usuário de apostas e jogador do jogo league of legends, gostaria muito de poder conseguir apostar no meu time preferido e ganhar um dinheiro em cima disso.
 * Eu como admin gostaria de ver e anunciar os jogos que estão acontecendo e que vão acontecer.
 * Eu como usuário gostaria de saber a maneira que receberei meu dinheiro após o jogo.
+* Eu como usuário gostaria de ver os jogadores atuais apostando.
 
 **Usuário**
 * Eu como usuário gostaria de maior facilidade e segurança na criação de minha conta.
+
+**Admin**
+* Eu como Admin gostaria de adicionar usuários e estipular créditos.
+* Eu como admin gostaria de gerenciar partidas.
 
 **Seleção de jogos**
 * Eu como usuário apostador gostaria de verificar quais são os tipos de aposta que tenho e os jogos disponíveis.
@@ -68,4 +63,4 @@ O objetivo do site é possibilitar a aposta nos jogos do mundial do LOL
 
 **Caso de uso**
 
-![image](https://github.com/desenvolvimento-web-unifil/02-documentacao-unifree/assets/82620144/dcfa014b-902f-49cb-a154-add259274b61)
+![image](Caso de uso.png)
